@@ -1,20 +1,19 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "./dist/types",
     "emitDeclarationOnly": true,
     "module": "ESNext",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "jsx": "react-jsx",
 
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@vue/*": ["src/vue/*"],
-      "@react/*": ["src/react/*"]
+      "vue/*": ["src/vue/*"],
+      "react/*": ["src/react/*"]
     },
     "strict": true,
-    "jsx": "react-jsx",
     "lib": ["dom", "esnext"],
     "allowSyntheticDefaultImports": true
   },

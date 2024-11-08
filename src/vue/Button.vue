@@ -3,5 +3,21 @@
 </template>
 
 <script setup lang="ts">
-  defineProps<{ label: string }>();
+  import { defineComponent } from 'vue';
+
+  defineComponent({
+    name: 'Button',
+    props: {
+      label: String
+    },
+    setup(props) {
+      return {
+        label: props.label
+      };
+    }
+  });
+
+  defineProps<{
+    label: String;
+  }>();
 </script>

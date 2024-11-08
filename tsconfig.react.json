@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "declarationDir": "./dist/react/types",
     "outDir": "dist/react"
   },
   "include": ["src/react/**/*", "src/react-entry.ts"],

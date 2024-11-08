@@ -1,8 +1,10 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "declarationDir": "./dist/vue/types",
     "outDir": "dist/vue"
   },
+  "jsx": "",
   "include": ["src/vue/**/*", "src/vue-entry.ts"],
   "exclude": ["src/react/**/*"]
 }

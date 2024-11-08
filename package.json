@@ -29,18 +29,13 @@
   "exports": {
     "./vue": {
       "types": "./dist/vue/index.d.ts",
-      "import": "./dist/vue/index.es.js",
-      "require": "./dist/vue/index.umd.js"
+      "import": "./dist/vue/index.js"
     },
     "./react": {
       "types": "./dist/react/index.d.ts",
-      "import": "./dist/react/index.es.js",
-      "require": "./dist/react/index.umd.js"
+      "import": "./dist/react/index.js"
     }
   },
-  "main": "./dist/vue/index.umd.js",
-  "module": "./dist/vue/index.es.js",
-  "types": "./dist/vue/index.d.ts",
   "files": [
     "dist",
     "README.md",
