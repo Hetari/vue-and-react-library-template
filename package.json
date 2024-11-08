@@ -1,12 +1,65 @@
 {
   "name": "g-motion",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "description": "A Vue and React Gsap Motion Library",
+  "author": {
+    "name": "Ebraheem Alhetari",
+    "email": "hetari4all@gmail.com",
+    "url": "https://github.com/hetari"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "bugs": {
+    "url": ""},
+  "keywords": [
+    "gsap",
+    "motion",
+    "vue",
+    "react",
+    "gsap-motion",
+    "vue-gsap",
+    "react-gsap"
+  ],
+  "exports": {
+    "./vue": {
+      "types": "./dist/vue/index.d.ts",
+      "import": "./dist/vue/index.es.js",
+      "require": "./dist/vue/index.umd.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.es.js",
+      "require": "./dist/react/index.umd.js"
+    }
+  },
+  "main": "./dist/vue/index.umd.js",
+  "module": "./dist/vue/index.es.js",
+  "types": "./dist/vue/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "src/types/*.ts"
+  ],
+  "typesVersions": {
+    "*": {
+      "vue": ["./dist/vue/index.d.ts"],
+      "react": ["./dist/react/index.d.ts"]
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:vue": "vite build --mode vue",
+    "build:react": "vite build --mode react",
+    "build": "npm run build:vue && npm run build:react",
+    "dev:vue": "vite --mode vue",
+    "dev:react": "vite --mode react"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
@@ -14,9 +67,14 @@
     "@vitejs/plugin-react": "^4.3.3",
     "@vitejs/plugin-vue": "^5.1.4",
     "typescript": "~5.6.2",
-    "vite": "^5.4.10"
+    "vite": "^5.4.10",
+    "vite-plugin-dts": "^4.3.0"
   },
   "dependencies": {
-    "vite-plugin-dts": "^4.3.0"
+    "react": "^18.3.1",
+    "vue": "^3.5.12"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

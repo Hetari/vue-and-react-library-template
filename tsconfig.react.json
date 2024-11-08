@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist/react"
+  },
+  "include": ["src/react/**/*", "src/react-entry.ts"],
+  "exclude": ["src/vue/**/*"]
+}
