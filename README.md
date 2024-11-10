@@ -45,7 +45,11 @@ Clone this repository to start developing your library:
 ```bash
 git clone https://github.com/your-username/vue-and-react-library-template.git
 cd vue-and-react-library-template
-npm install
+```
+
+Install the latest version of dependencies by running
+```bash
+npx npm-check-updates -u && npm i
 ```
 
 ## Getting Started
