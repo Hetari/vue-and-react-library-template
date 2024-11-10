@@ -150,6 +150,7 @@ vue-and-react-library-template/
 │   ├── vue/              # Vue library bundle
 │   └── react/            # React library bundle
 ├── src/                  # Source code
+├── ├── core/             # Shared core code
 │   ├── vue/              # Vue source code
 │   └── react/            # React source code
 ├── tsconfig.json         # Main TypeScript config
