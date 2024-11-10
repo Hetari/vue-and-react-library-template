@@ -1,9 +1,9 @@
 {
-  "name": "g-motion",
+  "name": "Library-Name",
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "description": "A Vue and React Gsap Motion Library",
+  "description": "A Template library for creating UI components in Vue and React.",
   "author": {
     "name": "Ebraheem Alhetari",
     "email": "hetari4all@gmail.com",
@@ -16,24 +16,26 @@
   },
   "homepage": "",
   "bugs": {
-    "url": ""},
+    "url": "https://github.com/hetari/vue-and-react-library-template/issues"
+  },
   "keywords": [
-    "gsap",
-    "motion",
     "vue",
     "react",
-    "gsap-motion",
-    "vue-gsap",
-    "react-gsap"
+    "library",
+    "template"
   ],
   "exports": {
     "./vue": {
-      "types": "./dist/vue/index.d.ts",
-      "import": "./dist/vue/index.js"
+      "import": "./dist/vue/index.js",
+      "require": "./dist/vue/index.cjs.js",
+      "types": "./dist/vue/types/index.d.ts",
+      "default": "./dist/vue/index.umd.js"
     },
     "./react": {
-      "types": "./dist/react/index.d.ts",
-      "import": "./dist/react/index.js"
+      "import": "./dist/react/index.js",
+      "require": "./dist/react/index.cjs.js",
+      "types": "./dist/react/types/index.d.ts",
+      "default": "./dist/react/index.umd.js"
     }
   },
   "files": [
@@ -43,8 +45,12 @@
   ],
   "typesVersions": {
     "*": {
-      "vue": ["./dist/vue/index.d.ts"],
-      "react": ["./dist/react/index.d.ts"]
+      "vue": [
+        "./dist/vue/index.d.ts"
+      ],
+      "react": [
+        "./dist/react/index.d.ts"
+      ]
     }
   },
   "scripts": {
@@ -53,14 +59,16 @@
     "build:vue": "vite build --mode vue",
     "build:react": "vite build --mode react",
     "build": "npm run build:vue && npm run build:react",
-    "dev:vue": "vite --mode vue",
-    "dev:react": "vite --mode react"
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags && sh -c 'gh release create $(git describe --tags) --generate-notes'",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags && sh -c 'gh release create $(git describe --tags) --generate-notes'",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags && sh -c 'gh release create $(git describe --tags) --generate-notes'"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
     "@vitejs/plugin-react": "^4.3.3",
     "@vitejs/plugin-vue": "^5.1.4",
+    "generate-changelog": "^1.8.0",
     "typescript": "~5.6.2",
     "vite": "^5.4.10",
     "vite-plugin-dts": "^4.3.0"
