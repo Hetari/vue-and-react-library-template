@@ -1,5 +1,7 @@
 # Vue and React Library Template
 
+### Enjoying my project? Please show your appreciation by starring it on GitHub! ⭐
+
 This is a monorepo template for building a reusable library that supports both **Vue** and **React** components. It is set up using **Vite** for fast builds, TypeScript for type safety, and includes configuration for generating declaration files (`.d.ts`). The template is optimized for creating UI components that can be shared across different frontend frameworks.
 
 ## Features
