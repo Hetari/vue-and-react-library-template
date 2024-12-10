@@ -59,9 +59,9 @@
     "build:vue": "vite build --mode vue",
     "build:react": "vite build --mode react",
     "build": "npm run build:vue && npm run build:react",
-    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags && sh -c 'gh release create $(git describe --tags) --generate-notes'",
-    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags && sh -c 'gh release create $(git describe --tags) --generate-notes'",
-    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags && sh -c 'gh release create $(git describe --tags) --generate-notes'"
+    "release:minor": "generate-changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags && sh -c 'gh release create $(git describe --tags) --generate-notes'",
+    "release:major": "generate-changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags && sh -c 'gh release create $(git describe --tags) --generate-notes'",
+    "release:patch": "generate-changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags && sh -c 'gh release create $(git describe --tags) --generate-notes'"
   },
   "devDependencies": {
     "@types/node": "^22.10.1",
