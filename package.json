@@ -26,16 +26,16 @@
   ],
   "exports": {
     "./vue": {
-      "import": "./dist/vue/index.js",
-      "require": "./dist/vue/index.cjs.js",
-      "types": "./dist/vue/types/index.d.ts",
-      "default": "./dist/vue/index.umd.js"
+      "types": "./src/vue/types/index.d.ts",
+      "import": "./src/vue/index.js",
+      "require": "./src/vue/index.cjs.js",
+      "default": "./src/vue/index.umd.js"
     },
     "./react": {
-      "import": "./dist/react/index.js",
-      "require": "./dist/react/index.cjs.js",
-      "types": "./dist/react/types/index.d.ts",
-      "default": "./dist/react/index.umd.js"
+      "types": "./src/react/types/index.d.ts",
+      "import": "./src/react/index.js",
+      "require": "./src/react/index.cjs.js",
+      "default": "./src/react/index.umd.js"
     }
   },
   "files": [
@@ -46,10 +46,10 @@
   "typesVersions": {
     "*": {
       "vue": [
-        "./dist/vue/index.d.ts"
+        "./src/vue/index.d.ts"
       ],
       "react": [
-        "./dist/react/index.d.ts"
+        "./src/react/index.d.ts"
       ]
     }
   },
